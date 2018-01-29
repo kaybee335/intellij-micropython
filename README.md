@@ -27,12 +27,12 @@ contributions to the project. Feel free to open issues and send pull requests!
 * Context-aware code completion and documentation
     * Use <kbd>Ctrl+Q</kbd> (<kbd>F1</kbd> on macOS) for quick documentation window, you can dock it permanently
 
-![Code completion](media/code-completion.png)
+      ![Code completion](media/code-completion.png)
 
 * Syntax checking and type checking
     * The plugin checks your code while you're typing it
 
-![Type checking](media/type-checking.png)
+      ![Type checking](media/type-checking.png)
 
 
 ### Run code on MicroPython devices
@@ -40,23 +40,36 @@ contributions to the project. Feel free to open issues and send pull requests!
 * Flash Python files to devices
     * Use "MicroPython" run configurations to flash files or folders in <em>"Run | Edit Configurations..."</em> menu
 
-![Run](media/run.png)
+      ![Run](media/run.png)
 
-* Create run configurations from Project navigator.
+* Create Run Configurations from Project navigator.
     * Right click on the file and select <em>"Create Flash ..."</em>
 
-![Run](media/create-config.png)
+      ![Quick Configuration Creation](media/create-config.png)
 
 * Define project structure for device in order to flash all files
     * Exclude the PyCharm <em>.idea</em> directory
 
-![Run](media/project-structure.png)
+      ![Project Structure](media/project-structure.png)
+
+    * Select the top level of the project in the path browser of <em>Run/Debug Configurations</em>
+
+      ![Project Flash](media/project-flash.png)
 
 * MicroPython REPL
     * Use <em>"Tools | MicroPython | MicroPython REPL"</em> menu to run a MicroPython shell on your device
 
-![REPL](media/repl.png)
+      ![REPL](media/repl.png)
 
+* Flash non-python files
+    * Currently non-python files do not display in the <em>Run/Debug Configurations</em> file picker although they do display in the Project Navigator.
+    * Non-python files can be uploaded to the board by manually typing the required filename/path components into the <em>Path:</em> dialog.
+    * it is easier to select a python file in the same directory as the file to be uploaded using the file picker and then manually edit the filename.
+      This ensures that the path component of the file to be uploaded is correct.
+    * Note that when flashing an entire project using the technique above, ALL files are uploaded to the device, including non-python files.
+      This is the reason the <em>.idea</em> directory was excluded from the project structure.
+
+      ![Non-python File Upload](media/json-upload.png)
 
 ## Requirements
 
