@@ -52,7 +52,7 @@ contributions to the project. Feel free to open issues and send pull requests!
 
       ![Project Structure](media/project-structure.png)
 
-    * Select the top level of the project in the path browser of <em>Run/Debug Configurations</em>
+    * Select the top level of the project in the path browser of <em>"Run/Debug Configurations"</em>
 
       ![Project Flash](media/project-flash.png)
 
@@ -62,8 +62,8 @@ contributions to the project. Feel free to open issues and send pull requests!
       ![REPL](media/repl.png)
 
 * Flash non-python files
-    * Currently non-python files do not display in the <em>Run/Debug Configurations</em> file picker although they do display in the Project Navigator.
-    * Non-python files can be uploaded to the board by manually typing the required filename/path components into the <em>Path:</em> dialog.
+    * Currently non-python files do not display in the <em>"Run/Debug Configurations"</em> file picker although they do display in the Project Navigator.
+    * Non-python files can be uploaded to the board by manually typing the required filename/path components into the <em>"Path:"</em> dialog.
     * it is easier to select a python file in the same directory as the file to be uploaded using the file picker and then manually edit the filename.
       This ensures that the path component of the file to be uploaded is correct.
     * Note that when flashing an entire project using the technique above, ALL files are uploaded to the device, including non-python files.
