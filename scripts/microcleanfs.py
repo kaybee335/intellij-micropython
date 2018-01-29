@@ -16,7 +16,7 @@
 """Remove the contents of the file system on a MicroPython device.
 
 Usage:
-    micrormdir PORT [options]
+    microcleanfs PORT [options]
 
     Options:
     -f --force     Remove ALL files from filesystem w/o preserving excludes
