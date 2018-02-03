@@ -32,6 +32,7 @@ from ampy.files import Files
 from ampy.pyboard import Pyboard, PyboardError
 from docopt import docopt
 
+
 def main(args: List[str]) -> None:
     opts = docopt(__doc__, argv=args)
     port = opts['PORT']
@@ -40,14 +41,15 @@ def main(args: List[str]) -> None:
     print('Connecting to {}'.format(port), file=sys.stderr)
     board = Pyboard(port)
     files = Files(board)
-    exclude_files = ['boot.py']     # Specifying subdirectories DOES NOT work as they will
-                                    # be deleted when the parent directory is deleted.
-                                    # Specifying top level directories DOES work.
+
+    # Specifying subdirectories DOES NOT work as they will be deleted when the
+    # parent directory is deleted. Specifying top level directories DOES work.
+    exclude_files = ['boot.py']
 
     print('Removing the contents of the file system')
     wait_for_board()
     for name in files.ls():
-        if force or not any(name == x for x in exclude_files):
+        if force or name not in exclude_files:
             try:
                 files.rm(name)
             except (RuntimeError, PyboardError):
